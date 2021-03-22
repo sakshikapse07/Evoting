@@ -1,0 +1,95 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  Voter
+  // CSS dependencies
+  
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css')
+  link(rel='stylesheet',href='stylesheets/dash_voter.css')
+
+
+.navigation
+  a.button(href='/logOut')
+    img(src="https://pbs.twimg.com/profile_images/378800000639740507/fc0aaad744734cd1dbc8aeb3d51f8729_400x400.jpeg")
+    .logout LOGOUT
+
+.cloud.cloud-a
+  .line-a
+  .line-b
+  .line-c
+  .line-d
+  .line-e
+.plane
+  .wings
+    .fan
+      .fan-wings
+        .fan-a
+        .fan-b
+        .fan-c
+        .fan-d
+    .cat
+      .legs
+  .wheel
+    .left
+    .right
+.cloud.cloud-b
+  .line-a
+  .line-b
+  .line-c
+  .line-d
+  .line-e
+
+
+.py-5
+  .container
+    .row
+      .col-md-12
+        h1.display-2 Welcome #{user_fullname}
+
+if voter_verification == "Yes" && election_status == "No"
+  .py-5
+    .container
+      .row
+        .col-md-12
+          h1.display-4 Elections are not yet started. Please Wait.
+    .container
+      .row
+        .col-md-12
+          button(onclick="location.href='/result_page'"  type='sumbit') RESULT  
+          //- a.btn.btn-primary.w-25.mx-5(href='/result_page') Result 
+
+else if voter_verification == "No"
+  .py-5
+    .container
+      .row
+        .col-md-12
+          h2.display-4
+            | Thank you for registering. Your details are not yet verified by Election Authority. Please Wait.
+
+else if voter_verification == "Yes" && election_status == "Yes" && already_voted == "No"           
+  .py-5
+    .container
+      .row
+        .col-md-12
+          h1.display-4 Elections are Live. Click on the below button to vote
+    .container
+      .row
+        .col-md-12
+          a(href='#') 
+            button(onclick='goVote()') Vote
+    
+else if already_voted == "Yes" && election_status == "No" && voter_verification == "Yes"            
+  .py-5
+    .container
+      .row
+        .col-md-12
+          h1.display-4 Elections are Not Live.
+    .container
+      .row
+        .col-md-12
+          button(onclick="location.href='/result_page'"  type='sumbit') RESULT  
+          //-a.btn.btn-primary.w-25.mx-5(href='/result_page') Result 
+
+
+script(src='/javascripts/voter_dash_scripts.js')         

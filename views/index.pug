@@ -1,0 +1,92 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
+  link(rel='stylesheet' href='stylesheets/index.css')
+
+
+.topnav
+  a.active(href='#home') E-Voting
+  a(href='/login') Login
+  a(href='/register') Register
+  a(href='/about') About Us
+
+  
+.header(data-ix='show-nav')
+  .w-container.contents
+    .main-heading-wrapper
+      h1(data-ix='fade-in-heading') Vote&nbsp;
+      h1(data-ix='fade-in-heading-2') To Make Change.
+      h1.without-code(data-ix='fade-in-heading-3') Vote
+      h1.without-code(data-ix='fade-in-heading-4')
+        | For Yourself.
+.all-the-icons
+  .clip-path-container
+    .icon1.v
+  .clip-path-container
+    .icon1.o
+  .clip-path-container
+    .icon1.t
+  .clip-path-container
+    .icon1.e
+  .clip-path-container
+    .icon1.for
+  .clip-path-container
+    .icon1.u
+section#service
+  .container
+    .row
+      .col-md-12
+        .section_title.text-center
+          h1 Our Services
+    .row
+      // START SINGLE SERVICE AREA
+      .col-md-6.col-lg-4.col-sm-12
+        .single_service.hvr-curl-top-right
+          .single_service-left
+            .icon
+              i.fa.fa-laptop
+          .single_service-body
+            h4.single_service-heading Online Elections
+            p
+              | Send your voters an email with secure, single-use voting links
+              | that ensure only authorized voters can vote, once.
+      // /END SINGLE SERVICE AREA
+      // START SINGLE SERVICE AREA
+      .col-md-6.col-lg-4.col-sm-12
+        .single_service.hvr-curl-top-right
+          .single_service-left
+            .icon
+              i.fas.fa-quidditch
+          .single_service-body
+            h4.single_service-heading Online Polls
+            p
+              | Create a personalized poll that anyone can vote on, and
+              | publicize it using your website, email, or social media.
+      // /END SINGLE SERVICE AREA
+      // START SINGLE SERVICE AREA
+      .col-md-6.col-lg-4.col-sm-12
+        .single_service.hvr-curl-top-right
+          .single_service-left
+            .icon
+              i.fas.fa-newspaper
+          .single_service-body
+            h4.single_service-heading Automated Ballot Counts
+            p
+              | Count ranked ballots that you&apos;ve already collected (using
+              | e.g., paper ballots or your own vote collection software).
+      // /END SINGLE SERVICE AREA
+// /END SERVICE AREA
+//
+  <footer class="site-footer">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12 col-md-6">
+  <h6>Made By Zensarians❤</h6>
+  </div>
+  </footer>
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js' integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0' crossorigin='anonymous')

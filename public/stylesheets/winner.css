@@ -1,0 +1,86 @@
+.celebrate {
+    /* the paint worklet watches the --pieces and --colors properties for changes, so we can do logical things like add more confetti pieces as the screen gets wider */
+    --pieces: 25;
+    /* put all possible colors separated by a space and split it in JS to turn it into an array */
+    /* bright version! */
+    --colors: #58edc4 #b57ce5 #f74c3c #38cfdb #df46b9 #ffc107 #b1bac8;
+    /* muted version */
+    /* --colors: #f7c4c6 #8faca4 #efcf79 #f74c3c9e #1c4728 #bba6c9 #fc9a36 #b1bac8 #eb847c; */
+    background-image: paint(confetti);
+    /* general styles */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxchart {
+    padding-left: 400px;
+}
+
+@media screen and (min-width: 40rem) {
+    /* bigger screen, bigger party! 🎉 */
+    .celebrate {
+        --pieces: 45;
+    }
+}
+
+@media screen and (min-width: 65rem) {
+    .celebrate {
+        --pieces: 70;
+    }
+}
+
+
+/* layout and misc. styling */
+
+::selection {
+    background-color: #ffc107;
+    color: #111;
+}
+
+::-moz-selection {
+    background-color: #ffc107;
+    color: #111;
+}
+
+body {
+    --bg: linear-gradient(to top right, #f3f3f4, #fff1f1);
+    margin: 0;
+    background: var(--bg);
+}
+
+h1 {
+    padding: 0 0.5em;
+    background-color: #fff;
+    color: #1c4728;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 400;
+    font-size: 10vmin;
+    text-align: center;
+}
+
+a,
+a:visited,
+a:link {
+    color: #f74c3c;
+}
+
+
+/* assume no support at first */
+
+.yay {
+    display: none;
+}
+
+@supports (background-image: paint(confetti)) {
+    .womp {
+        display: none;
+    }
+    .yay {
+        display: block;
+    }
+    .yay span {
+        color: #f74c3c;
+    }
+}

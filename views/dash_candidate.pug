@@ -1,0 +1,90 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // PAGE settings
+  title Dashboard | Candidate
+  
+  link(rel='stylesheet' href='/stylesheets/dash_candidate.css')
+
+
+.navigation
+  a.button(href='/logOut')
+    img(src="https://pbs.twimg.com/profile_images/378800000639740507/fc0aaad744734cd1dbc8aeb3d51f8729_400x400.jpeg")
+    .logout LOGOUT
+
+.cloud.cloud-a
+  .line-a
+  .line-b
+  .line-c
+  .line-d
+  .line-e
+.plane
+  .wings
+    .fan
+      .fan-wings
+        .fan-a
+        .fan-b
+        .fan-c
+        .fan-d
+    .cat
+      .legs
+  .wheel
+    .left
+    .right
+.cloud.cloud-b
+  .line-a
+  .line-b
+  .line-c
+  .line-d
+  .line-e
+
+
+h1 Welcome #{user_fullname}
+
+if candidate_verification == "Yes" && election_status == "No"
+  h1 Elections are not Live
+  //- h1 Elections are not yet started. Please Wait.
+  
+  .container
+    .row
+      .col-md-12
+        button(onclick="location.href='/result_page'"  type='sumbit') RESULT   
+
+
+else if candidate_verification == "No"
+  h2
+    | Thank you for registering. Your details are not yet verified by Election Authority. Please Wait.
+
+else if candidate_verification == "Yes" && election_status == "Yes" 
+  h1 Elections are Live. Please wait
+  //- h1 Elections are Live. Click on the below button to see the results
+  
+        
+.clouds
+  svg.cloud.big.front.slowest(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='762px' height='331px' viewbox='0 0 762 331' enable-background='new 0 0 762 331' xml:space='preserve')
+    path(fill='#FFFFFF' d='M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106\
+    c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529\
+    C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5\
+    S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z')
+  svg.cloud.distant.smaller(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='762px' height='331px' viewbox='0 0 762 331' enable-background='new 0 0 762 331' xml:space='preserve')
+    path(fill='#FFFFFF' d='M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106\
+    c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529\
+    C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5\
+    S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z')
+  svg.cloud.small.slow(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='762px' height='331px' viewbox='0 0 762 331' enable-background='new 0 0 762 331' xml:space='preserve')
+    path(fill='#FFFFFF' d='M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106\
+    c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529\
+    C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5\
+    S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z')
+  svg.cloud.distant.super-slow.massive(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='762px' height='331px' viewbox='0 0 762 331' enable-background='new 0 0 762 331' xml:space='preserve')
+    path(fill='#FFFFFF' d='M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106\
+    c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529\
+    C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5\
+    S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z')
+  svg.cloud.slower(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='762px' height='331px' viewbox='0 0 762 331' enable-background='new 0 0 762 331' xml:space='preserve')
+    path(fill='#FFFFFF' d='M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106\
+    c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529\
+    C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5\
+    S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z')
+
