@@ -79,7 +79,6 @@ details,
 embed,
 figure,
 figcaption,
-footer,
 header,
 hgroup,
 menu,
@@ -140,9 +139,7 @@ nav,
 section,
 article,
 aside,
-footer {
-    display: block;
-}
+
 
 p {
     line-height: 150%;
@@ -214,7 +211,7 @@ section {
 }
 
 #amazingTeam {
-    padding: 20px 0px 50px 0px;
+    padding: 20px 0px 85px 0px;
     position: relative;
     display: block;
     background: #f7f7f7;
@@ -621,10 +618,7 @@ section {
     /*.icon2 {
      margin-left: 100px;
  }*/
-    /*#footer p {
-     text-align: center;
-     width: 100%;
- }*/
+   
     #portfolio .folio-list {
         width: 70%;
     }
@@ -725,10 +719,7 @@ section {
     /*.icon2 {
      margin-left: 8%;
  }*/
-    /*#footer p {
-     text-align: left;
-     width: 255px;
- }*/
+    
     #aboutUs .section3_article p {
         width: 175px;
         font-size: 12px;
@@ -1529,9 +1520,7 @@ section {
         bottom: -170px;
         margin-bottom: 20px;
     }
-    footer p {
-        font-size: 14px;
-    }
+   
 }
 
 .topnav {
@@ -1558,3 +1547,13 @@ section {
     color: black;
     font-weight: bold;
 }
+
+.footer {
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    background-color:#9CA3AF;
+    text-align: center;
+  }
