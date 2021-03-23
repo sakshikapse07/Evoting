@@ -2,7 +2,9 @@ var express = require('express');
 var MongoClient = require('mongodb').MongoClient
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/evoting");
+require('dotenv').config()
+const mongodb_uri = process.env.mongo_uri;
+mongoose.connect(mongodb_uri);
 var userModel = require('../model/user.schema');
 var voterModel = require('../model/voter.schema');
 var candidateModel = require('../model/candidate.schema');
