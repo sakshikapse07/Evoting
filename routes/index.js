@@ -2,7 +2,7 @@ var express = require('express');
 var MongoClient = require('mongodb').MongoClient
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://sakshi:ApUMUJYaRfIQX5mO@test.rih4i.mongodb.net/evotingy?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://sakshi:ApUMUJYaRfIQX5mO@test.rih4i.mongodb.net/evoting?retryWrites=true&w=majority");
 var userModel = require('../model/user.schema');
 var voterModel = require('../model/voter.schema');
 var candidateModel = require('../model/candidate.schema');
