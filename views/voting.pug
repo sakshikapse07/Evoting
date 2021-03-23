@@ -30,6 +30,7 @@ else if election_status == "Yes"
           h1 Candidate Name
         .col-md-3
           h1 Action
+          
   each val in candidate_details
     .py-1
       .container
@@ -38,6 +39,7 @@ else if election_status == "Yes"
             h1 #{val.candidate_name}
           .col-md-3
             a.btn.btn-primary.w-75(href='#' onclick='cast_vote("'+val.candidate_id+'")') Vote
+
 script(src='https://code.jquery.com/jquery-3.3.1.min.js')
 script(src='/javascripts/vote_scripts.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')

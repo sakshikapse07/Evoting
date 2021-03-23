@@ -1,0 +1,57 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  
+ 
+  link(rel='stylesheet' href='/stylesheets/candidate.css')
+
+.topnav
+  a(href='/') E-Voting
+  a.active(href='/candidate') Candidate
+  a(href='/login') Login
+  a(href='/register') Register
+  a(href='/about') About Us
+  
+
+ul.card-list
+  li.card
+    a.card-image(style='background-image: url(/images/rahul.jpg);')
+      img(src='rahul.jpg' alt='Rahul Gandhi')
+    a.card-description
+      h2 Candidate: Rahul Gandhi
+      p (Congress)
+      h2 Agenda
+      p
+        b  Provide good rates to farmers
+      br
+      p
+        b  Provide Education to poor families
+  li.card
+    a.card-image(style='background-image: url(/images/narendra.jpg);')
+      img(src='narendra.jpg' alt='Narendra Modi')
+    a.card-description
+      h2 Candidate: Narendra Modi
+      p (BJP)
+      br
+      h2 Agenda
+      p
+        b  Digitalalised India 
+      br
+      p
+        b  Encouraging abroad trips 
+  li.card
+    a.card-image(style='background-image: url(/images/arvind.jpg);')
+      img(src='arvind.jpg' alt='Arvind Kejriwal')
+    a.card-description
+      h2 Candidate: Arvind Kejriwal
+      p (AAP)
+      h2 Agenda
+      p
+        b  Improvement in Education System 
+      br
+      p
+        b  Reduction in electricity bill 
+
+script(src='text/javascript' href='/javascripts/candidate.js')

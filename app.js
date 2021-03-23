@@ -13,16 +13,17 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
-app.use(session({ 
+app.use(session({
     secret: "Hi This is a Secret for Session",
-    resave:true,
-    saveUninitialized:true }));
+    resave: true,
+    saveUninitialized: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+//-app.use('/', indexRouter);
 app.use(indexRouter);
 
 // catch 404 and forward to error handler

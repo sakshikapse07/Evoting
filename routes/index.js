@@ -2,7 +2,7 @@ var express = require('express');
 var MongoClient = require('mongodb').MongoClient
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/evoting");
+mongoose.connect("mongodb+srv://sakshi:ApUMUJYaRfIQX5mO@test.rih4i.mongodb.net/evotingy?retryWrites=true&w=majority");
 var userModel = require('../model/user.schema');
 var voterModel = require('../model/voter.schema');
 var candidateModel = require('../model/candidate.schema');
@@ -243,9 +243,15 @@ router.get('/logOut', function(req, res) {
     res.redirect("/login");
 });
 
+router.get('/candidate', function(req, res) {
+    res.render("candidate");
+});
+
+
 router.get('/about', function(req, res) {
     res.render("about");
 });
+
 
 router.get('/result', function(req, res) {
     candidateModel.find({}, function(err, resu) {
