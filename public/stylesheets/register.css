@@ -162,8 +162,23 @@ label {
     bottom: 0;
     left: 0;
     margin-top: 3rem;
-    
     padding: 2rem;
-    background-color:#9CA3AF;
+    background-color: #9CA3AF;
     text-align: center;
-  }
+}
+
+.alert {
+    display: none;
+}
+
+.requirements {
+    list-style-type: none;
+}
+
+.wrong .fa-check {
+    display: none;
+}
+
+.good .fa-times {
+    display: none;
+}

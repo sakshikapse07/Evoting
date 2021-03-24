@@ -6,7 +6,7 @@ head
   
  
   link(rel='stylesheet' href='/stylesheets/candidate.css')
-
+ 
 .topnav
   a(href='/') E-Voting
   a.active(href='/candidate') Candidate
@@ -14,11 +14,11 @@ head
   a(href='/register') Register
   a(href='/about') About Us
   
-
+ 
 ul.card-list
   li.card
-    a.card-image(style='background-image: url(/images/rahul.jpg);')
-      img(src='rahul.jpg' alt='Rahul Gandhi')
+    a.card-image(style='background-image: url(images/rahul.jpg);')
+      img(src='images/rahul.jpg' alt='Rahul Gandhi')
     a.card-description
       h2 Candidate: Rahul Gandhi
       p (Congress)
@@ -30,7 +30,7 @@ ul.card-list
         b  Provide Education to poor families
   li.card
     a.card-image(style='background-image: url(/images/narendra.jpg);')
-      img(src='narendra.jpg' alt='Narendra Modi')
+      img(src='/images/narendra.jpg' alt='Narendra Modi')
     a.card-description
       h2 Candidate: Narendra Modi
       p (BJP)
@@ -43,7 +43,7 @@ ul.card-list
         b  Encouraging abroad trips 
   li.card
     a.card-image(style='background-image: url(/images/arvind.jpg);')
-      img(src='arvind.jpg' alt='Arvind Kejriwal')
+      img(src='/images/arvind.jpg' alt='Arvind Kejriwal')
     a.card-description
       h2 Candidate: Arvind Kejriwal
       p (AAP)
@@ -54,4 +54,10 @@ ul.card-list
       p
         b  Reduction in electricity bill 
 
-script(src='text/javascript' href='/javascripts/candidate.js')
+.footer
+  | 
+  strong Made by Team Amigos
+  | .
+
+script(src='/javascripts/candidate.js')
+

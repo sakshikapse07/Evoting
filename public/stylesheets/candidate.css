@@ -3,6 +3,19 @@
     background-color: #333;
 }
 
+
+/* footer */
+
+.footer {
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3rem;
+    background-color: #9CA3AF;
+    text-align: center;
+}
+
 .topnav a {
     float: left;
     color: #f2f2f2;

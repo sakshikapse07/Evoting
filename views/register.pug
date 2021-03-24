@@ -1,31 +1,24 @@
 head
-  link(rel='stylesheet', href='/stylesheets/register.css')
+  link(rel='stylesheet' href='/stylesheets/register.css')
   script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
   script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
   script(src='/javascripts/login.js')
-meta(charset='utf-8')
-meta(http-equiv='X-UA-Compatible' content='IE=edge')
-title Register
-// Tell the browser to be responsive to screen width
-meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
-// Bootstrap 3.3.6
-link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css' integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M' crossorigin='anonymous')
-// Font Awesome
-link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css')
-link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
-
-
-//- Sweetalert 
-script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
-
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title Register
+  meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css' integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css')
+  link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+  script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+  link(href='css/bootstrap.min.css' rel='stylesheet')
 .topnav
   a(href='/') E-Voting
   a(href='/candidate') Candidate
   a(href='/login') Login
   a.active(href='/register') Register
   a(href='/about') About Us
- 
-
 .container
   .row
     .col-lg-3.col-md-2
@@ -39,28 +32,116 @@ script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
             // Full name
             .form-group
               label.form-control-label(for='fullname') FULLNAME
-              input#name.form-control(type='text' name='full_name')
+              input#name.form-control(type='text' name='full_name' required='')
             // Username
             .form-group
               label.form-control-label(for='uname') USERNAME
-              input#mail.form-control(type='text' name='uname')
+              input#mail.form-control(type='text' name='uname' required='')
             // Password
             .form-group
-              label.form-control-label(for='password') PASSWORD
-              input#password.form-control(type='password' name='pword')
-            .form-group
-              label.form-control-label(for='job') ROLE
-              select#job.form-control(name='role')
-                option(value='Selected')  Choose Select 
-                option(value='VOTER') Voter
-                option(value='CANDIDATE') Candidate
-            .col-lg-12.loginbttm
-              .col-lg-6.login-btm.login-text
-                // Error Message
-              .col-lg-6.login-btm.login-button
-                button.btn.btn-outline-primary(type='submit') REGISTER
+              label.form-control-label(data-error='wrong' data-success='right' for='password') PASSWORD
+              input#password.form-control.validate(type='password' name='pword' required='')
+              .alert.alert-warning.password-alert(role='alert')
+                ul
+                  li.requirements.leng
+                    i.fas.fa-check.green-text
+                    i.fas.fa-times.red-text
+                    |  Your password must have at least 8 chars.
+                  li.requirements.big-letter
+                    i.fas.fa-check.green-text
+                    i.fas.fa-times.red-text
+                    |  Your password must have at least 1 big letter.
+                  li.requirements.num
+                    i.fas.fa-check.green-text
+                    i.fas.fa-times.red-text
+                    |  Your password must have at least 1 number.
+                  li.requirements.special-char
+                    i.fas.fa-check.green-text
+                    i.fas.fa-times.red-text
+                    |  Your password must have at least 1 special char.
+              .form-group
+                label.form-control-label(for='job') ROLE
+                select#job.form-control(name='role')
+                  option(value='Selected')  Choose Select 
+                  option(value='VOTER') Voter
+                  option(value='CANDIDATE') Candidate
+              .col-lg-12.loginbttm
+                .col-lg-6.login-btm.login-text
+                  // Error Message
+                .col-lg-6.login-btm.login-button
+                  button.btn.btn-outline-primary(type='submit') REGISTER
       .col-lg-3.col-md-2
 .footer
-  | 
   strong Made by Team Amigos
   | .
+ 
+script(type='text/javascript' src='/javascripts/validation.js')
+
+
+
+//- head
+//-   link(rel='stylesheet', href='/stylesheets/register.css')
+//-   script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+//-   script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+//-   script(src='/javascripts/login.js')
+//- meta(charset='utf-8')
+//- meta(http-equiv='X-UA-Compatible' content='IE=edge')
+//- title Register
+//- // Tell the browser to be responsive to screen width
+//- meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+//- // Bootstrap 3.3.6
+//- link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css' integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M' crossorigin='anonymous')
+//- // Font Awesome
+//- link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css')
+//- link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+
+
+//- //- Sweetalert 
+//- script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+
+//- .topnav
+//-   a(href='/') E-Voting
+//-   a(href='/candidate') Candidate
+//-   a(href='/login') Login
+//-   a.active(href='/register') Register
+//-   a(href='/about') About Us
+ 
+
+//- .container
+//-   .row
+//-     .col-lg-3.col-md-2
+//-     .col-lg-6.col-md-8.login-box
+//-       .col-lg-12.login-key
+//-         i.fa.fa-user-plus(aria-hidden='true')
+//-       .col-lg-12.login-title REGISTER
+//-       .col-lg-12.login-form
+//-         .col-lg-12.login-form
+//-           form(method='POST' onsubmit='return checkReg()' action='/registerProcess')
+//-             // Full name
+//-             .form-group
+//-               label.form-control-label(for='fullname') FULLNAME
+//-               input#name.form-control(type='text' name='full_name')
+//-             // Username
+//-             .form-group
+//-               label.form-control-label(for='uname') USERNAME
+//-               input#mail.form-control(type='text' name='uname')
+//-             // Password
+//-             .form-group
+//-               label.form-control-label(for='password') PASSWORD
+//-               input#password.form-control(type='password' name='pword')
+//-             .form-group
+//-               label.form-control-label(for='job') ROLE
+//-               select#job.form-control(name='role')
+//-                 option(value='Selected')  Choose Select 
+//-                 option(value='VOTER') Voter
+//-                 option(value='CANDIDATE') Candidate
+//-             .col-lg-12.loginbttm
+//-               .col-lg-6.login-btm.login-text
+//-                 // Error Message
+//-               .col-lg-6.login-btm.login-button
+//-                 button.btn.btn-outline-primary(type='submit') REGISTER
+//-       .col-lg-3.col-md-2
+//- .footer
+//-   | 
+//-   strong Made by Team Amigos
+//-   | .

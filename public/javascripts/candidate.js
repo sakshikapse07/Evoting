@@ -1,8 +1,10 @@
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
 
-    setTimeout(lazyLoad, 1000);
+//     setTimeout(lazyLoad, 1000);
 
-});
+// });
+
+window.addEventListener(lazyLoad);
 
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
