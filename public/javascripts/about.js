@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(".md-content").append("<div></div>");
-    var mailAddress = new Array("sakshiKapse@gmail.com", "suja.hash69@gmail.com", "akhil.pillai@gmail.com", "azhar.gourse@gmail.com");
-    var phoneNumber = new Array("9074470033", "8372823914", "9195660742", "8590321452");
+    var mailAddress = new Array("example@gmail.com", "example@gmail.com", "example@gmail.com", "example@gmail.com");
+    var phoneNumber = new Array("9988777766", "9988777766", "9988777766", "9988777766");
     var webSite = new Array("www.amigos.com", "www.amigos.com", "www.amigos.com", "www.amigos.com");
     var currentPerson, personAddress, personPhoneNumber, personWebSite;
 
