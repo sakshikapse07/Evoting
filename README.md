@@ -2,7 +2,7 @@
 
 # How to start
 
-1. git clone https://github.com/iamsujauddin/Evoting.git
+1. git clone https://github.com/sakshikapse07/Evoting.git
 2. cd Evoting
 3. npm install
 4. npm start
